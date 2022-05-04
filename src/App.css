@@ -4,6 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  max-height: 100vh;
 }
 
 .button {
@@ -29,5 +30,22 @@
   background: none;
   border: 2px solid black;
   height: 26px;
+  padding: 0 4px;
+}
+
+.ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  width: 100vw;
+  justify-content: center;
+}
+
+.li {
+  width: 150px;
+}
+
+.img {
+  max-width: 100%;
 }

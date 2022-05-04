@@ -18,7 +18,7 @@ function Search({ name }) {
 
   return (
     <>
-      <h1>Hello <b style={{color: "red"}}>{name}</b>.</h1>
+      <h1>Hello, <b style={{color: "red"}}>{name}</b></h1>
       <form onSubmit={e => {
         fetch(`http://localhost:3001/search?query=${query}`, {mode: "cors"})
           .then(res => res.json())
@@ -28,9 +28,9 @@ function Search({ name }) {
         <input className="input" placeholder="Search for a image" onChange={e => setQuery(e.target.value)} />
         <input className="button" type="submit" value="Search" />
       </form>
-      <ol style={{listStyle: "none", display: "flex", flexWrap: "wrap", padding: 0}}>
-      {results.map((res, idx) => <li key={idx} style={{flexBasis: 100, flexGrow: 1, height: 100}}>
-        <img src={res.src.tiny} style={{maxWidth: "100%", maxHeight: "100%"}} />
+      <ol className="ol">
+      {results.map((res, idx) => <li className="li" key={idx}>
+        <img className="img" src={res.src.tiny} />
       </li>)}
       </ol>
     </>
