@@ -12,6 +12,10 @@ function Search({ name }) {
     }
   })
 
+  if (!name) {
+    return;
+  }
+
   return (
     <>
       <h1>Hello <b style={{color: "red"}}>{name}</b>.</h1>
