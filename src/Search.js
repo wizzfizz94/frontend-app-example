@@ -17,7 +17,9 @@ function Search({ name }) {
         <input type="submit" value="Search" />
       </form>
       <ol style={{listStyle: "none", display: "flex", flexWrap: "wrap", padding: 0}}>
-      {results.map((res, idx) => <li key={idx} style={{flexBasis: 100, flexGrow: 1, height: 100}}><img src={res.src.original} style={{maxWidth: "100%", maxHeight: "100%"}} /></li>)}
+      {results.map((res, idx) => <li key={idx} style={{flexBasis: 100, flexGrow: 1, height: 100}}>
+        <img src={res.src.tiny} style={{maxWidth: "100%", maxHeight: "100%"}} />
+      </li>)}
       </ol>
     </>
   );

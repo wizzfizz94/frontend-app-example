@@ -12,10 +12,7 @@ app.get('/search', (req, res) => {
     {headers: {Authorization: process.env.PIXELS_API_KEY}}
   )
   .then(r => r.json())
-  .then(json => {
-    console.log(json);
-    res.send(json)
-  })
+  .then(json => res.send(json))
 })
 
 app.listen(port, () => {
