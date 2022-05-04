@@ -9,8 +9,8 @@ function NameForm({ setNameHandler }) {
       navigate("/search");
       e.preventDefault();
     }}>
-      <input onChange={e => setNameHandler(e.target.value)} placeholder="Enter your name" />
-      <input type="submit" value="Submit" />
+      <input className="input" onChange={e => setNameHandler(e.target.value)} placeholder="Enter your name" />
+      <input className="button" type="submit" value="Submit" />
     </form>
   );
 }
