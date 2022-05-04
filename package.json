@@ -1,6 +1,8 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "hi-johner",
+  "version": "1.0.0",
+  "author": "wizzfizz94",
+  "engine": "v16.15.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
