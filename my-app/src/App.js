@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import { Outlet } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+import Search from "./Search";
+import NameForm from "./NameForm";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [name, setName] = useState(null);
 
   return (
-    <div className="App">
-      <div className="container">
-        <form onSubmit={e => {
-          console.log("sumbit");
-          e.preventDefault();
-        }}>
-          <input onChange={e => setName(e.target.value)} placeholder="Enter your name" />
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
-    </div>
+    <BrowserRouter>
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<NameForm setNameHandler={name => setName(name)} />} />
+          <Route path="search" element={<Search name={name} />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 

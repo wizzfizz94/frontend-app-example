@@ -4,5 +4,6 @@
   "description": "Example react app.",
   "main": "index.js",
   "author": "Zachary Newman",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
