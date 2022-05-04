@@ -1,8 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Search({ name }) {
-  const [query, setQuery] = useState(null);
+  const [query, setQuery] = useState(null)
   const [results, setResults] = useState([])
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!name) {
+      navigate("/");
+    }
+  })
 
   return (
     <>

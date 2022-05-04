@@ -1,9 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 function NameForm({ setNameHandler }) {
   const navigate = useNavigate();
-
 
   return (
     <form onSubmit={e => {
