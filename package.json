@@ -1,0 +1,8 @@
+{
+  "name": "hi-johner",
+  "version": "1.0.0",
+  "description": "Example react app.",
+  "main": "index.js",
+  "author": "Zachary Newman",
+  "license": "MIT"
+}
