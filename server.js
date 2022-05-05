@@ -9,7 +9,7 @@ const port = 3001
 app.get('/search', (req, res) => {
   fetch(
     `https://api.pexels.com/v1/search?query=${req.query.query}&per_page=20`,
-    {headers: {Authorization: process.env.PIXELS_API_KEY}}
+    {headers: {Authorization: process.env.PEXELS_API_KEY}}
   )
   .then(r => r.json())
   .then(json => res.send(json))
