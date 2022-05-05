@@ -1,3 +1,5 @@
+![demo](./demo.gif)
+
 ## Start Frontend server
 `yarn start`
 
